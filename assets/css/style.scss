@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+header, footer {
+	background-color: #ccc;
+}
+#site{
+	display: flex;
+	flex-direction: column;
+	@media screen and (min-width: 920px){
+		flex-direction: row-reverse;
+	}
+}
+section{
+	border: 2px solid #666fab;
+}
+#battleArena {
+	background-color: #fab666;
+}
+#charBank {
+	background-color:  #f6a6b6;
+}
+#charBank, #battleArena {
+	@media screen and (min-width: 920px){
+		flex: 1;
+	}
+}
