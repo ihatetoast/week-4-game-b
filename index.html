@@ -21,21 +21,30 @@
 					<h2>You</h2>
 					<!-- where the chosen player will go to once chosen from possibles -->
 				</div>
-				<div id="chosenEnemy">
-					<h2>Opponent</h2>
+				<div id="enemies">
+					<h2>Opponents</h2>
 					<!-- where the chosen enemy will go to once chosen from possibles -->
-				</div>
+					<div id="onDeck">
+						<h2>Current opponent</h2>
+					</div>
+					<div id="upNext">
+						<h2>Line of opponents</h2>
+						<ul id="opponentsUpNext">
+						<!-- will fill with opponents dynamically -->
+						</ul>
+					</div>
+				</div> <!-- end enemies -->
 			</section><!-- end battleArena -->
 
 			<!-- CHARACTER BANK: 
 			contains divs that will hold the two fighting characters -->
-			<section id="charBank">
+			<section class="charHoldingArea">
 				<h2>Title for section</h2>
 				<div>
 					<p>Choose your character, then pick your first opponent</p>
 				</div>
-				<ul>
-					<!-- load with list of characters dynamically -->
+				<ul id="charBank">
+					
 				</ul>
 			</section>
 		</main>

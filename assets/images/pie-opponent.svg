@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="98px" height="85px" viewBox="0 0 98 85" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>pie-opponent</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="54.314667%" cy="58.6070674%" fx="54.314667%" fy="58.6070674%" r="193.131618%" gradientTransform="translate(0.543147,0.586071),scale(0.545455,1.000000),rotate(70.090323),translate(-0.543147,-0.586071)" id="radialGradient-1">
+            <stop stop-color="#E6C28B" offset="0%"></stop>
+            <stop stop-color="#BD760A" offset="100%"></stop>
+        </radialGradient>
+        <path d="M19,18 C19,14.6862915 16.5375661,12 13.5,12 C10.4624339,12 8,14.6862915 8,18 L19,18 Z" id="path-2"></path>
+        <path d="M11,26 C11,22.6862915 8.53756612,20 5.5,20 C2.46243388,20 0,22.6862915 0,26 L11,26 Z" id="path-3"></path>
+        <path d="M28,13 C28,9.6862915 25.5375661,7 22.5,7 C19.4624339,7 17,9.6862915 17,13 L28,13 Z" id="path-4"></path>
+        <path d="M38,9 C38,5.6862915 35.5375661,3 32.5,3 C29.4624339,3 27,5.6862915 27,9 L38,9 Z" id="path-5"></path>
+        <path d="M49,7 C49,3.6862915 46.5375661,1 43.5,1 C40.4624339,1 38,3.6862915 38,7 L49,7 Z" id="path-6"></path>
+        <radialGradient cx="62.3697937%" cy="13.5441707%" fx="62.3697937%" fy="13.5441707%" r="89.5763748%" gradientTransform="translate(0.623698,0.135442),scale(1.000000,0.739130),rotate(101.330453),translate(-0.623698,-0.135442)" id="radialGradient-7">
+            <stop stop-color="#EDC9C9" stop-opacity="0.5" offset="0%"></stop>
+            <stop stop-color="#4E0303" stop-opacity="0.5" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-8">
+            <stop stop-color="#EDB6B6" stop-opacity="0.496235281" offset="0%"></stop>
+            <stop stop-color="#6D0909" stop-opacity="0.96337183" offset="100%"></stop>
+        </linearGradient>
+        <ellipse id="path-9" cx="8.5" cy="11.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-10" cx="22.5" cy="14.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-11" cx="35.5" cy="17.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-12" cx="49.5" cy="21.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-13" cx="63.5" cy="24.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-14" cx="76.5" cy="28.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-15" cx="8.5" cy="11.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-16" cx="22.5" cy="14.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-17" cx="35.5" cy="17.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-18" cx="49.5" cy="21.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-19" cx="63.5" cy="24.5" rx="8.5" ry="11.5"></ellipse>
+        <ellipse id="path-20" cx="76.5" cy="28.5" rx="8.5" ry="11.5"></ellipse>
+        <radialGradient cx="57.6763731%" cy="68.9989481%" fx="57.6763731%" fy="68.9989481%" r="72.4870689%" gradientTransform="translate(0.576764,0.689989),scale(0.843750,1.000000),rotate(-110.886323),scale(1.000000,1.178347),translate(-0.576764,-0.689989)" id="radialGradient-21">
+            <stop stop-color="#DFAC5E" offset="0%"></stop>
+            <stop stop-color="#DFB473" offset="100%"></stop>
+        </radialGradient>
+        <path d="M100,42.1852647 L100,86 L9.81818182,70.7447169 C6.60488873,70.2011518 4,67.1645618 4,63.9623033 L4,29.8978678 C4,28.6537153 4.39320919,27.5676022 5.06253816,26.7364087 C5.04169697,26.7263083 5.02085092,26.7162036 5,26.7060946 C14.656652,14.3061106 31.0107055,5 47.9726271,5 L100,38.9904026 L100,42.1852647 Z M100,43.2818991 L100,44.0313684 C83.3027316,45.3228772 67.4740789,45.3228772 52.5140419,44.0313684 C42.413231,42.5972421 28.3959477,37.6893319 10.4621921,29.3076378 C9.5523443,30.1801389 9,31.4369084 9,32.9162896 L9,62.7438401 C9,65.9581428 11.6074936,69.0061539 14.824,69.5517635 L100,84 L100,43.2818991 Z" id="path-22"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dribble" transform="translate(-611.000000, -10.000000)">
+            <g id="pie-opponent" transform="translate(660.500000, 52.000000) scale(-1, 1) translate(-660.500000, -52.000000) translate(610.000000, 9.000000)">
+                <g id="curls">
+                    <g id="Oval-2" transform="translate(13.500000, 15.000000) rotate(322.000000) translate(-13.500000, -15.000000) ">
+                        <use fill="#E6C28B" xlink:href="#path-2"></use>
+                        <use fill="url(#radialGradient-1)" xlink:href="#path-2"></use>
+                    </g>
+                    <g id="Oval-2-Copy-4" transform="translate(5.500000, 23.000000) rotate(311.000000) translate(-5.500000, -23.000000) ">
+                        <use fill="#E6C28B" xlink:href="#path-3"></use>
+                        <use fill="url(#radialGradient-1)" xlink:href="#path-3"></use>
+                    </g>
+                    <g id="Oval-2-Copy" transform="translate(22.500000, 10.000000) rotate(331.000000) translate(-22.500000, -10.000000) ">
+                        <use fill="#E6C28B" xlink:href="#path-4"></use>
+                        <use fill="url(#radialGradient-1)" xlink:href="#path-4"></use>
+                    </g>
+                    <g id="Oval-2-Copy-2" transform="translate(32.500000, 6.000000) rotate(342.000000) translate(-32.500000, -6.000000) ">
+                        <use fill="#E6C28B" xlink:href="#path-5"></use>
+                        <use fill="url(#radialGradient-1)" xlink:href="#path-5"></use>
+                    </g>
+                    <g id="Oval-2-Copy-3" transform="translate(43.500000, 4.000000) rotate(-8.000000) translate(-43.500000, -4.000000) ">
+                        <use fill="#E6C28B" xlink:href="#path-6"></use>
+                        <use fill="url(#radialGradient-1)" xlink:href="#path-6"></use>
+                    </g>
+                </g>
+                <g id="filling" transform="translate(8.000000, 19.000000)">
+                    <path d="M5.8481821,0.100261468 L92,20.93002 L91.3778454,65 L5.8481821,49.4818526 C2.61832031,48.8321142 0,45.2023949 0,41.3746476 L0,5.85455573 C0,2.0268084 2.61832031,-0.549476892 5.8481821,0.100261468 Z" id="piefilling" fill="#93081D"></path>
+                    <g id="cherryteeth1" transform="translate(5.000000, 23.000000)">
+                        <g id="Oval-3">
+                            <use fill="#B6384B" xlink:href="#path-9"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-9"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-9"></use>
+                        </g>
+                        <g id="Oval-3">
+                            <use fill="#B6384B" xlink:href="#path-10"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-10"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-10"></use>
+                        </g>
+                        <g id="Oval-3-Copy-3">
+                            <use fill="#B6384B" xlink:href="#path-11"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-11"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-11"></use>
+                        </g>
+                        <g id="Oval-3-Copy-4">
+                            <use fill="#B6384B" xlink:href="#path-12"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-12"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-12"></use>
+                        </g>
+                        <g id="Oval-3-Copy-5">
+                            <use fill="#B6384B" xlink:href="#path-13"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-13"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-13"></use>
+                        </g>
+                        <g id="Oval-3-Copy-6">
+                            <use fill="#B6384B" style="mix-blend-mode: lighten;" xlink:href="#path-14"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-14"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-14"></use>
+                        </g>
+                    </g>
+                    <g id="cherryteeth1-copy" transform="translate(48.000000, 22.500000) scale(-1, -1) translate(-48.000000, -22.500000) translate(5.000000, 2.000000)">
+                        <g id="Oval-3">
+                            <use fill="#B6384B" xlink:href="#path-15"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-15"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-15"></use>
+                        </g>
+                        <g id="Oval-3">
+                            <use fill="#B6384B" xlink:href="#path-16"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-16"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-16"></use>
+                        </g>
+                        <g id="Oval-3-Copy-3">
+                            <use fill="#B6384B" xlink:href="#path-17"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-17"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-17"></use>
+                        </g>
+                        <g id="Oval-3-Copy-4">
+                            <use fill="#B6384B" xlink:href="#path-18"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-18"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-18"></use>
+                        </g>
+                        <g id="Oval-3-Copy-5">
+                            <use fill="#B6384B" xlink:href="#path-19"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-19"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-19"></use>
+                        </g>
+                        <g id="Oval-3-Copy-6">
+                            <use fill="#B6384B" xlink:href="#path-20"></use>
+                            <use fill="url(#radialGradient-7)" xlink:href="#path-20"></use>
+                            <use fill="url(#linearGradient-8)" xlink:href="#path-20"></use>
+                        </g>
+                    </g>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="#E6C28B" xlink:href="#path-22"></use>
+                    <use fill="url(#radialGradient-21)" xlink:href="#path-22"></use>
+                </g>
+                <g id="Group" transform="translate(22.000000, 19.000000)">
+                    <path d="M8.42824625,10 C12.0577256,10 15,7.76142375 15,5 C15,2.23857625 12.0577256,0 8.42824625,0 C4.79876687,0 1,0.274357685 1,3.03578143 C1,5.79720518 4.79876687,10 8.42824625,10 Z" id="Oval-4" fill="#D69196"></path>
+                    <circle id="Oval-5" fill="#93081D" cx="10.5" cy="6.5" r="3.5"></circle>
+                    <path d="M8.29525514,9 C11.4989367,9 14,7.13485574 14,5 C14,2.86514426 11.4989367,1 8.29525514,1 C3.24454614,1 1,1.52025801 1,2.87430284 C1,5.19122064 5.27206978,9 8.29525514,9 Z" id="Oval-4-Copy-2" stroke="#060605" stroke-width="2"></path>
+                </g>
+                <g id="Group-Copy" transform="translate(45.000000, 15.000000)">
+                    <path d="M8.42824625,10 C12.0577256,10 15,7.76142375 15,5 C15,2.23857625 12.0577256,0 8.42824625,0 C4.79876687,0 1,0.274357685 1,3.03578143 C1,5.79720518 4.79876687,10 8.42824625,10 Z" id="Oval-4" fill="#D69196"></path>
+                    <circle id="Oval-5" fill="#93081D" cx="10.5" cy="6.5" r="3.5"></circle>
+                    <path d="M8.29525514,9 C11.4989367,9 14,7.13485574 14,5 C14,2.86514426 11.4989367,1 8.29525514,1 C3.24454614,1 1,1.52025801 1,2.87430284 C1,5.19122064 5.27206978,9 8.29525514,9 Z" id="Oval-4-Copy-2" stroke="#060605" stroke-width="2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -23,6 +23,8 @@ section{
 }
 #charBank {
 	background-color:  #f6a6b6;
+	display: flex;
+  justify-content: space-around;
 }
 #charBank, #battleArena {
 	@media screen and (min-width: 920px){
