@@ -1,24 +1,11 @@
 $(document).ready(function(){
  console.log("dun did load");
+let playerChosen = false;
 
-// 	create characters to choose from
-// list of players in object. try this. not comfy
-// const gameCharsArr = [
-// 	// ['name', 'health points', baseAttack', 'counterAttack', '../images/name-rest.svg']
-// 	['pie', 100, 8, 24, '../images/pie-rest.svg'],
-// 	['icecream', 120, 6, 16, '../images/icecream-rest.svg'],
-// 	['donut', 140, 5, 12, '../images/donut-rest.svg'],
-// 	['waffle', 160, 4, 8, '../images/waffle-rest.svg']
-// ];
+let charAvailArr = [];
+let playerChar = [];
+let opponentArr = [];
 
-//try this:
-// var obj = {
-//   "flammable": "inflammable",
-//   "duh": "no duh"
-// };
-// $.each( obj, function( key, value ) {
-//   alert( key + ": " + value );
-// });
 const gameCharsObj = {
 	'pie': {
         name: 'pie',
@@ -56,24 +43,74 @@ const gameCharsObj = {
       imageUrlPlayer: "./assets/images/waffle-player.svg",
       imageUrlOpponent: "./assets/images/waffle-opponent.svg"
   }
-    
 }
-$.each(gameCharsObj, (key, value) =>{
-  console.log( `${key}: ${value.name} `);
-  $('#charBank').append(`<li class="rest">
-		<h3>${value.name}</h3>
-			<img class="restImg" src="./assets/images/${value.name}-rest.svg" alt="image of ${value.name}">
-			<p>Health Points: <span id="${value.name}-hp">${value.hp}</span></p>
-		</li>`);
-});
+// 	create characters to choose from
+// list of players in object. try this. not comfy
+// const gameCharsArr = [
+// 	// ['name', 'health points', baseAttack', 'counterAttack', '../images/name-rest.svg']
+// 	['pie', 100, 8, 24, '../images/pie-rest.svg'],
+// 	['icecream', 120, 6, 16, '../images/icecream-rest.svg'],
+// 	['donut', 140, 5, 12, '../images/donut-rest.svg'],
+// 	['waffle', 160, 4, 8, '../images/waffle-rest.svg']
+// ];
+gameSetup();
 
-// if the chosenPlayer area is empty, clicking will choose player/defender
-// 	if it is not empty, clicking appends to opponent area.
+////////////////////////////////////////////////////////////
+//  FUNCTION TO SET UP ICONS TO DOM WITH CLASSES AND IDS  //
+////////////////////////////////////////////////////////////
+//try this:
+// var obj = {
+//   "flammable": "inflammable",
+//   "duh": "no duh"
+// };
+// $.each( obj, function( key, value ) {
+//   alert( key + ": " + value );
+// });
+function gameSetup(){
+	$.each(gameCharsObj, (key, value) =>{
+		//load available div and add class avail
+	  $('#charBank').append(`
+			<div class="character available ${value.name}-rest" data-name=${value.name}>
+        <h3>${value.name}</h3>
+        <p>HP: <span id="${value.name}-hp">${value.hp}</span></p>
+			</div>
+			`);
+	});
+}
 
-$('.rest').on('click', function(e){
-	$('#chosenPlayer').append(e.target);//just moves the img or h1 dep on what i click
-	$('#chosenPlayer').append($(this));
-})
+
+////////////////////////////////////////////////////////////
+//     ADD EVENT LISTENER TO THE ICONS. DROP F-BOMBS      //
+////////////////////////////////////////////////////////////
+// $(".addproduct").click(function(){
+//   // Holds the product ID of the clicked element
+//   var productId = $(this).attr('class').replace('addproduct ', '');
+
+//   addToCart(productId);
+// });
+// if player div is empty, chose player and others go to deck
+// if it is not (as in a player has been chosen) choose opponent
+	$('.available').on('click', function(e){
+    $('.available').not(this).removeClass('available').addClass('opponents');
+		$(this).addClass(`${$(this).data("name")}-player`).removeClass(`${$(this).data("name")}-rest available`);
+    
+		$('#chosenPlayer').append($(this));
+		$('.available').unbind('click');		
+		$('#opponentsUpNext').append($('.available'));
+		// $('#opponentsUpNext').append($('.character'));
+	});
+	// chosenPlayer = true;
+
+// function chooseOpponent(){
+//   $('.opponents').on('click', function(e){
+//     $(this).addClass(`${$(this).data("name")}-opponent`)
+//     console.log("opponent clicked");
+//     // $(this).addClass(`${$(this).data("name")}-opponent`).removeClass(`${$(this).data("name")}-rest available`);
+//     // $('.available').unbind('click');
+//   }); 
+// }
+
+
 
 //on load, players need to be in their holding area. id="charBank"
 // gameCharsArr.forEach(char => {

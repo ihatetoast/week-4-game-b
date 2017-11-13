@@ -17,23 +17,27 @@
 		<main id="site">
 			<section id="battleArena">
 				<h1>Battle Arena</h1>
-				<div id="chosenPlayer">
-					<h2>You</h2>
-					<!-- where the chosen player will go to once chosen from possibles -->
-				</div>
-				<div id="enemies">
-					<h2>Opponents</h2>
-					<!-- where the chosen enemy will go to once chosen from possibles -->
-					<div id="onDeck">
-						<h2>Current opponent</h2>
-					</div>
-					<div id="upNext">
-						<h2>Line of opponents</h2>
-						<ul id="opponentsUpNext">
+				<div class="deck">
+					<div class="chosenPlayer">
+						<h2>You</h2>
+						<div id="chosenPlayer">
+						<!-- where the chosen player will go to once chosen from possibles -->
+						</div>
+					</div> <!-- end class chosenPlayer -->
+					<div class="enemies">
+						<h2>Opponents</h2>
+						<div class="onDeck">
+							<h2>Current opponent</h2>
+							<div id="onDeck">
+							<!-- where the chosen enemy will go to once chosen from possibles -->
+							</div>
+						</div>
+			
+						<div id="opponentsUpNext">
 						<!-- will fill with opponents dynamically -->
-						</ul>
-					</div>
-				</div> <!-- end enemies -->
+						</div>
+					</div> <!-- end enemies -->
+				</div><!-- end deck -->
 			</section><!-- end battleArena -->
 
 			<!-- CHARACTER BANK: 
@@ -43,9 +47,9 @@
 				<div>
 					<p>Choose your character, then pick your first opponent</p>
 				</div>
-				<ul id="charBank">
+				<div id="charBank">
 					
-				</ul>
+				</div>
 			</section>
 		</main>
 		<footer>
