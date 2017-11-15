@@ -1,3 +1,5 @@
+// this is giving me the irits!
+
 $(document).ready(function(){
  console.log("dun did load");
 let isPlayerChosen;
@@ -78,6 +80,14 @@ $('.characters').on("click", function(e){
     isPlayerChosen = true;
   }
 });
+
+//once player is chosen, the others become opponents and player fights them all.
+//would it be easier to empty the div below and reload with a new look above?
+//yes! look at the calculator and how the dom was loaded last. you feel like you have to stick to the original set up and you don't. it's no way to live your life.
+
+//set variables in arrays to i can loop over them, because i love iteriteriterating. render to dom from those arrays. this doesn't have to be pretty. make it work.
+
+
 
 //clear div players went to
 function initializeGame(){
