@@ -34,70 +34,63 @@ section{
 	background-repeat: no-repeat;
 	background-position: center;
 }
-#charBank{
-	display: flex;
-
-}
-
-.pie-rest{
-	background-image: url(../images/pie-rest.svg);
-}
-.icecream-rest{
-	background-image: url(../images/icecream-rest.svg);
-}
-.donut-rest{
-	background-image: url(../images/donut-rest.svg);
-}
-.waffle-rest{
-	background-image: url(../images/waffle-rest.svg);
-}
-.pie-player{
-	background-image: url(../images/pie-player.svg);
-}
-.icecream-player{
-	background-image: url(../images/icecream-player.svg);
-}
-.donut-player{
-	background-image: url(../images/donut-player.svg);
-}
-.waffle-player{
-	background-image: url(../images/waffle-player.svg);
-}
-
-
-.available {
-	background-color: blue;
-	border: 2px solid green;
-}
-.unavailable {
-	background-color: grey;
-	border: 2px solid green;
-}
-.player {
-	background-color: yellow;
-}
-.opponent {
-	background-color: red;
-}
-.deck {
-	display: flex;
-}
-.chosenPlayer {
-	border: 2px dotted red;
-}
 #onDeck {
 	border: 2px dotted blue;
+	background-color: green;
 }
 #opponentsUpNext {
 	display:flex;
+	background-color: purple;
 }
 #charBank {
 	background-color:  #f6a6b6;
 	display: flex;
+	flex-wrap: wrap;
   justify-content: space-around;
+  li {
+  	border: 1px solid green;
+  	margin: 0.2em 0.1em;
+  }
+}
+.characterFrame{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 10em;
+  height: 10em;
+  padding: 2em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 #charBank, #battleArena {
 	@media screen and (min-width: 920px){
 		flex: 1;
 	}
 }
+
+
+.pie-rest {
+  background-image: url(../images/pie-rest.svg); }
+
+.icecream-rest {
+  background-image: url(../images/icecream-rest.svg); }
+
+.donut-rest {
+  background-image: url(../images/donut-rest.svg); }
+
+.waffle-rest {
+  background-image: url(../images/waffle-rest.svg); }
+
+.pie-player {
+  background-image: url(../images/pie-player.svg); }
+
+.icecream-player {
+  background-image: url(../images/icecream-player.svg); }
+
+.donut-player {
+  background-image: url(../images/donut-player.svg); }
+
+.waffle-player {
+  background-image: url(../images/waffle-player.svg); }
+

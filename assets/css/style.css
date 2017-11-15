@@ -34,8 +34,37 @@ section {
   background-repeat: no-repeat;
   background-position: center; }
 
+#onDeck {
+  border: 2px dotted blue;
+  background-color: green; }
+
+#opponentsUpNext {
+  display: flex;
+  background-color: purple; }
+
 #charBank {
-  display: flex; }
+  background-color: #f6a6b6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  #charBank li {
+    border: 1px solid green;
+    margin: 0.2em 0.1em; }
+
+.characterFrame {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 10em;
+  height: 10em;
+  padding: 2em;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+@media screen and (min-width: 920px) {
+  #charBank, #battleArena {
+    flex: 1; } }
 
 .pie-rest {
   background-image: url(../images/pie-rest.svg); }
@@ -60,40 +89,5 @@ section {
 
 .waffle-player {
   background-image: url(../images/waffle-player.svg); }
-
-.available {
-  background-color: blue;
-  border: 2px solid green; }
-
-.unavailable {
-  background-color: grey;
-  border: 2px solid green; }
-
-.player {
-  background-color: yellow; }
-
-.opponent {
-  background-color: red; }
-
-.deck {
-  display: flex; }
-
-.chosenPlayer {
-  border: 2px dotted red; }
-
-#onDeck {
-  border: 2px dotted blue; }
-
-#opponentsUpNext {
-  display: flex; }
-
-#charBank {
-  background-color: #f6a6b6;
-  display: flex;
-  justify-content: space-around; }
-
-@media screen and (min-width: 920px) {
-  #charBank, #battleArena {
-    flex: 1; } }
 
 /*# sourceMappingURL=style.css.map */

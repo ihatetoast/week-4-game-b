@@ -1,13 +1,14 @@
 $(document).ready(function(){
  console.log("dun did load");
-let playerChosen = false;
-
-let charAvailArr = [];
-let playerChar = [];
-let opponentArr = [];
+let isPlayerChosen;
+let characterNames = ["pie", "icecream", "donut", "waffle"];
+let player;
+let playerId;
+let opponents;
+let opponentArr;
 
 const gameCharsObj = {
-	'pie': {
+  'pie': {
         name: 'pie',
         hp: 120,
         baseAttack: 6,
@@ -44,84 +45,44 @@ const gameCharsObj = {
       imageUrlOpponent: "./assets/images/waffle-opponent.svg"
   }
 }
-// 	create characters to choose from
-// list of players in object. try this. not comfy
-// const gameCharsArr = [
-// 	// ['name', 'health points', baseAttack', 'counterAttack', '../images/name-rest.svg']
-// 	['pie', 100, 8, 24, '../images/pie-rest.svg'],
-// 	['icecream', 120, 6, 16, '../images/icecream-rest.svg'],
-// 	['donut', 140, 5, 12, '../images/donut-rest.svg'],
-// 	['waffle', 160, 4, 8, '../images/waffle-rest.svg']
-// ];
-gameSetup();
-
-////////////////////////////////////////////////////////////
-//  FUNCTION TO SET UP ICONS TO DOM WITH CLASSES AND IDS  //
-////////////////////////////////////////////////////////////
-//try this:
-// var obj = {
-//   "flammable": "inflammable",
-//   "duh": "no duh"
-// };
-// $.each( obj, function( key, value ) {
-//   alert( key + ": " + value );
-// });
 function gameSetup(){
-	$.each(gameCharsObj, (key, value) =>{
-		//load available div and add class avail
-	  $('#charBank').append(`
-			<div class="character available ${value.name}-rest" data-name=${value.name}>
+  $.each(gameCharsObj, (key, value) =>{
+    //load available div and add class avail
+    $('#charBank').append(`
+      <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>
         <h3>${value.name}</h3>
         <p>HP: <span id="${value.name}-hp">${value.hp}</span></p>
-			</div>
-			`);
-	});
+      </div>
+      `);
+  });
 }
 
+gameSetup();
+$('.characters').on("click", function(e){
+  console.log("char frame booped");
+  if(isPlayerChosen){
+    console.log("player is chosen");
+  }else{
+    player = $(this);
+    playerId =$(this).attr('id');
+    player.appendTo("#chosenPlayer").removeClass(`${playerId}-rest`).addClass(`${playerId}-player`);
 
-////////////////////////////////////////////////////////////
-//     ADD EVENT LISTENER TO THE ICONS. DROP F-BOMBS      //
-////////////////////////////////////////////////////////////
-// $(".addproduct").click(function(){
-//   // Holds the product ID of the clicked element
-//   var productId = $(this).attr('class').replace('addproduct ', '');
+    $('.characters').not(this).addClass("opponents");
+    let playerIdx = characterNames.indexOf(playerId);
+    opponentArr = characterNames.filter((name, idx) => {
+      if(characterNames.indexOf(name) !== playerIdx) {
+        return name;
+      }
+    });
+    console.log(playerIdx);
+    isPlayerChosen = true;
+  }
+});
 
-//   addToCart(productId);
-// });
-// if player div is empty, chose player and others go to deck
-// if it is not (as in a player has been chosen) choose opponent
-	$('.available').on('click', function(e){
-    $('.available').not(this).removeClass('available').addClass('opponents');
-		$(this).addClass(`${$(this).data("name")}-player`).removeClass(`${$(this).data("name")}-rest available`);
-    
-		$('#chosenPlayer').append($(this));
-		$('.available').unbind('click');		
-		$('#opponentsUpNext').append($('.available'));
-		// $('#opponentsUpNext').append($('.character'));
-	});
-	// chosenPlayer = true;
-
-// function chooseOpponent(){
-//   $('.opponents').on('click', function(e){
-//     $(this).addClass(`${$(this).data("name")}-opponent`)
-//     console.log("opponent clicked");
-//     // $(this).addClass(`${$(this).data("name")}-opponent`).removeClass(`${$(this).data("name")}-rest available`);
-//     // $('.available').unbind('click');
-//   }); 
-// }
-
-
-
-//on load, players need to be in their holding area. id="charBank"
-// gameCharsArr.forEach(char => {
-// 	console.log(`char is ${char[0]}`);
-// 	//the html
-// 	$('#charBank').append(`<li>
-// 		<h3>${char[0]}</h3>
-// 		<img class="rest" src="./assets/images/${char[0]}-rest.svg" alt="image of ${char[0]}">
-// 		<p>Health Points: <span id="${char[0]}-hp">${char[1]}</span></p>
-// 		</li>`);
-// })
+//clear div players went to
+function initializeGame(){
+  $("#chosenPlayer, #onDeck, #opponentsUpNext").empty()
+}
 
 // TO DO:
 // 	create characters to choose from XX
@@ -133,9 +94,13 @@ function gameSetup(){
 
 //on load, players need to be in their holding area.
 
+
 // functionality:
 // GAME SET UP:
 // 1) when i click on a character's picture, it goes to the player spot.
+//hold that player in a variable. 
+//if this variable is assigned, 
+
 // 			will always be the fighter for the game
 // 		it is no longer an option (ie it leaves the array or bank or whatever)
 	
