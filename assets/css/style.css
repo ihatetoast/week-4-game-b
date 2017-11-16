@@ -23,16 +23,13 @@ section {
   display: flex;
   flex-direction: column; }
 
-.character {
+.deck {
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 10em;
-  height: 10em;
-  padding: 2em;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center; }
+  justify-content: space-around; }
+
+#chosenPlayer {
+  border: 2px dotted green;
+  background-color: blue; }
 
 #onDeck {
   border: 2px dotted blue;
@@ -40,10 +37,11 @@ section {
 
 #opponentsUpNext {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: purple; }
 
 #charBank {
-  background-color: #f6a6b6;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
@@ -55,39 +53,10 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 10em;
-  height: 10em;
-  padding: 2em;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center; }
+  padding: 0.2em; }
 
 @media screen and (min-width: 920px) {
   #charBank, #battleArena {
     flex: 1; } }
-
-.pie-rest {
-  background-image: url(../images/pie-rest.svg); }
-
-.icecream-rest {
-  background-image: url(../images/icecream-rest.svg); }
-
-.donut-rest {
-  background-image: url(../images/donut-rest.svg); }
-
-.waffle-rest {
-  background-image: url(../images/waffle-rest.svg); }
-
-.pie-player {
-  background-image: url(../images/pie-player.svg); }
-
-.icecream-player {
-  background-image: url(../images/icecream-player.svg); }
-
-.donut-player {
-  background-image: url(../images/donut-player.svg); }
-
-.waffle-player {
-  background-image: url(../images/waffle-player.svg); }
 
 /*# sourceMappingURL=style.css.map */
