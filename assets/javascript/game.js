@@ -3,7 +3,7 @@
 
 $(document).ready(function(){
  console.log("dun did load");
-let isPlayerChosen;
+let isPlayerChosen = false;
 let characterNames = ["pie", "icecream", "donut", "waffle"];
 let player;
 let playerId;
@@ -49,49 +49,113 @@ const gameCharsObj = {
   }
 }
 function loadCharBank(){
-
   $.each(gameCharsObj, (key, value) =>{
     //load available div and add class avail
-
-    $('#charBank').append(`
-      <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>
-        <h3>${value.name}</h3>
-        <img src="./assets/images/${value.name}-rest.svg">
-        <p>HP: <span id="${value.name}-hp">${value.hp}</span></p>
-      </div>
-      `);
+    let charBox = $(`
+          <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>`);
+    let charName = $(`<h3>${value.name}</h3>`);
+    let charImg = $(`<img class="characterImg" id="${value.name}Img" src="./assets/images/${value.name}-rest.svg">`);
+    let charHealth = $(`<p>HP: <span id="${value.name}-hp">${value.hp}</span></p>`);
+    charBox.append(charName).append(charImg).append(charHealth);
+    $('#charBank').append(charBox);
   });
+choosePlayer();
 }
 
 loadCharBank();
 
-$('.characters').on("click", function(e){
-  console.log("char frame booped");
-  if(isPlayerChosen){
-    console.log("player is chosen");
-  }else{
-    player = $(this);
-    playerId =$(this).attr('id');
-    $("#chosenPlayer").html(player);
-    player.removeClass(`${playerId}-rest`).addClass(`${playerId}-player`);
+function choosePlayer(){
 
-    $('.characters').not(this).addClass("opponents");
-    let playerIdx = characterNames.indexOf(playerId);
-    opponentArr = characterNames.filter((name, idx) => {
-      if(characterNames.indexOf(name) !== playerIdx) {
-        return name;
-      }
-    });
-    console.log(playerIdx);
-    isPlayerChosen = true;
-  }
-});
+  $('.characters').on("click", function(e){
+    
+    console.log("char frame booped");
+    if(isPlayerChosen){
+      return;
+    }else{
+      player = $(this);
+      playerId =$(this).attr('id');
+      //find the image element inside this clicked .characters thing:
+      let playerImg = $(this).find(".characterImg");
+      playerImg.attr("src", `./assets/images/${playerId}-player.svg`);
 
+        console.log(playerImg);
+
+      $("#chosenPlayer").html(player);
+      player.removeClass(`${playerId}-rest`).addClass(`${playerId}-player`);
+
+      $('.characters').not(this).addClass("opponents");
+      let playerIdx = characterNames.indexOf(playerId);
+      opponentArr = characterNames.filter((name, idx) => {
+        if(characterNames.indexOf(name) !== playerIdx) {
+          return name;
+        }
+      });
+      $('#opponentsUpNext, #charBank').empty();
+    // append only the unpicked to the upnext div
+      $.each(gameCharsObj, function(key, value){
+        if(opponentArr.indexOf(key) != -1){
+          console.log(`${key} is an opponent, i fucking hope`);
+          let charBox = $(`
+          <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>`);
+          let charName = $(`<h3>${value.name}</h3>`);
+          let charImg = $(`<img class="characterImg" id="${value.name}Img" src="./assets/images/${value.name}-opponent.svg">`);
+          let charHealth = $(`<p>HP: <span id="${value.name}-hp">${value.hp}</span></p>`);
+          charBox.append(charName).append(charImg).append(charHealth);
+          $('#opponentsUpNext').append(charBox);
+        }
+      })
+      $("#message").text(`You are ${playerId}. Wise choice. Now choose an opponent.`);
+      isPlayerChosen = true;
+      
+    }
+  });
+
+}
 //once player is chosen, the others become opponents and player fights them all.
 //would it be easier to empty the div below and reload with a new look above?
 //yes! look at the calculator and how the dom was loaded last. you feel like you have to stick to the original set up and you don't. it's no way to live your life.
 
 //set variables in arrays to i can loop over them, because i love iteriteriterating. render to dom from those arrays. this doesn't have to be pretty. make it work.
+// function loadOpponents(){
+//   if(!isPlayerChosen){
+//     //only run if player is chosen
+//     return;
+//   }
+//   else {
+//     //can i iterate over the obj and check for keys in obj matching elems in opp array? only load those?
+//     console.log("fill the opponents' section");
+//     $('#opponentsUpNext, #charBank').empty();
+//     // append only the unpicked to the upnext div
+//     $.each(gameCharsObj, function(key, value){
+//       if(opponentArr.indexOf(key) != -1){
+//         console.log(`${key} is an opponent, i fucking hope`);
+//         let charBox = $(`
+//           <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>`);
+//         let charName = $(`<h3>${value.name}</h3>`);
+//         let charImg = $(`<img class="characterImg" id="${value.name}Img" src="./assets/images/${value.name}-opponent.svg">`);
+//         let charHealth = $(`<p>HP: <span id="${value.name}-hp">${value.hp}</span></p>`);
+//         charBox.append(charName).append(charImg).append(charHealth);
+//         $('#opponentsUpNext').append(charBox);
+//       }
+//     })
+//   }
+// }
+// $('.opponents').on('click', function(){
+
+// })
+
+
+// var obj = {
+//   "flammable": "inflammable",
+//   "duh": "no duh"
+// };
+// $.each( obj, function( key, value ) {
+//   alert( key + ": " + value );
+// });
+
+
+
+
 
 
 
