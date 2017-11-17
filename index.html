@@ -17,28 +17,40 @@
 		<main id="site">
 			<section id="battleArena">
 				<h1>Battle Arena</h1>
-				<div class="deck">
-
-					<div class="chosenPlayer">
-						<h2>Player</h2>
-						<div id="chosenPlayer">
-						<!-- where the chosen player will go to once chosen from possibles -->
-							<div class="characterFrame filler">
-								<img src="./assets/images/question.svg">
+				<div>
+					<p id="message">Choose your character, then pick your first opponent</p>
+				</div>
+				<div class="upperDeck">
+					<div class="deck">
+						<div class="chosenPlayer">
+							<h2>Player</h2>
+							<div id="chosenPlayer">
+							<!-- where the chosen player will go to once chosen from possibles -->
+								<div class="characterFrame filler">
+									<img src="./assets/images/question.svg">
+								</div>
 							</div>
-						</div>
-					</div> <!-- end class chosenPlayer -->
+						</div> <!-- end class chosenPlayer -->
 
-					<div class="onDeck">
-						<h2>Current opponent</h2>
-						<div id="onDeck">
-						<!-- where the chosen enemy will go to once chosen from possibles -->
-							<div class="characterFrame filler">
-								<img src="./assets/images/question.svg">
-							</div>
-						</div> <!-- end id=ondeck -->
-					</div><!-- end class=ondeck -->
-				</div> <!-- end deck -->
+						<div class="onDeck">
+							<h2>Current opponent</h2>
+							<div id="onDeck">
+							<!-- where the chosen enemy will go to once chosen from possibles -->
+								<div class="characterFrame filler">
+									<img src="./assets/images/question.svg">
+								</div>
+							</div> <!-- end id=ondeck -->
+						</div><!-- end class=ondeck -->
+					</div>
+						
+					</div>
+					<!-- div of attack button and a message bank to inform of attack number -->
+					<div id="attackDiv">
+						<button>Attack!</button>
+						<p id="attackResults"></p>
+					</div>
+				</div> <!-- end upperdeck -->
+
 
 						<div id="opponentsUpNext">
 						<!-- will fill with opponents dynamically -->
@@ -62,11 +74,7 @@
 
 			<!-- CHARACTER BANK: 
 			contains divs that will hold the two fighting characters -->
-			<section class="charHoldingArea">
-				<h2>Dessert Tray</h2>
-				<div>
-					<p id="message">Choose your character, then pick your first opponent</p>
-				</div>
+			<section class="charHoldingArea">				
 				<div id="charBank">
 					<!-- <ul id="charBank">  -->
 						<!-- <li>

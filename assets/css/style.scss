@@ -18,8 +18,11 @@ header, footer {
 section{
 	border: 2px solid #666fab;
 }
+@mixin box($side){
+	width: $side;
+	height: $side;
+}
 #battleArena {
-	background-color: #fab666;
 	display:flex;
 	flex-direction: column;
 }
@@ -27,28 +30,34 @@ section{
 	display:flex;
 	justify-content: space-around;
 }
+#chosenPlayer, #onDeck {
+	@include box(9em);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 #chosenPlayer {
-	border: 2px dotted green;
-	background-color: blue;
+	border: 2px solid green;
+	border-radius: 50%;
 }
 #onDeck {
-	border: 2px dotted blue;
-	background-color: green;
+	border: 2px solid red;
+	border-radius: 50%;
+}
+.chosenPlayer, .onDeck{
+	display: flex;
+	flex-direction: column;
+	align-items:center;
 }
 #opponentsUpNext {
 	display:flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	background-color: purple;
+	justify-content: flex-end;
 }
 #charBank {
 	display: flex;
 	flex-wrap: wrap;
   justify-content: space-around;
-  li {
-  	border: 1px solid green;
-  	margin: 0.2em 0.1em;
-  }
 }
 .characterFrame{
   display: flex;
@@ -62,6 +71,18 @@ section{
 	}
 }
 
+#attackDiv {
+	display:flex;
+	flex-direction: column;
+	justify-content: flex-start;
+  align-items: center;
+	flex-basis: 4em;
+	visibility: hidden;
+	border: 1px solid black;
+	button {
+		width: fit-content;
+	}
+}
 
 // .pie-rest {
 //   background-image: url(../images/pie-rest.svg); }

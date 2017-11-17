@@ -125,7 +125,9 @@ function chooseOpponent(){
 
       let oppIdx = opponentArr.indexOf(opponentId);
       opponentArr.splice(oppIdx, 1);
+      $('#attackDiv').css('visibility', 'visible');
       isOpponentChosen = true;
+      $("#message").text(`First opponent is ${opponentId}. Start your attack with by hitting the attack button.`);
     }
 
   })
