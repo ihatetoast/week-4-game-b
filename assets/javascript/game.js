@@ -1,13 +1,13 @@
 // this is giving me the irits!
-// IRITS!
-
+// THE IRITS!
 $(document).ready(function(){
  console.log("dun did load");
 let isPlayerChosen = false;
+let isOpponentChosen = false;
 let characterNames = ["pie", "icecream", "donut", "waffle"];
 let player;
 let playerId;
-let opponents;
+let opponent;
 let opponentArr =[];
 
 const gameCharsObj = {
@@ -52,13 +52,15 @@ function loadCharBank(){
   $.each(gameCharsObj, (key, value) =>{
     //load available div and add class avail
     let charBox = $(`
-          <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>`);
+          <div id="${value.name}" class="characters characterFrame available" data-name=${value.name}>`);
     let charName = $(`<h3>${value.name}</h3>`);
     let charImg = $(`<img class="characterImg" id="${value.name}Img" src="./assets/images/${value.name}-rest.svg">`);
     let charHealth = $(`<p>HP: <span id="${value.name}-hp">${value.hp}</span></p>`);
+
     charBox.append(charName).append(charImg).append(charHealth);
     $('#charBank').append(charBox);
   });
+
 choosePlayer();
 }
 
@@ -66,24 +68,24 @@ loadCharBank();
 
 function choosePlayer(){
 
-  $('.characters').on("click", function(e){
-    
-    console.log("char frame booped");
+  $('.available').on("click", function(e){
+
     if(isPlayerChosen){
+
       return;
+
     }else{
+
       player = $(this);
       playerId =$(this).attr('id');
+
       //find the image element inside this clicked .characters thing:
       let playerImg = $(this).find(".characterImg");
       playerImg.attr("src", `./assets/images/${playerId}-player.svg`);
-
-        console.log(playerImg);
-
       $("#chosenPlayer").html(player);
-      player.removeClass(`${playerId}-rest`).addClass(`${playerId}-player`);
+      player.removeClass(`${playerId}-rest, available`).addClass(`${playerId}-player`);
 
-      $('.characters').not(this).addClass("opponents");
+      $('.available').not(this).addClass("opponents");
       let playerIdx = characterNames.indexOf(playerId);
       opponentArr = characterNames.filter((name, idx) => {
         if(characterNames.indexOf(name) !== playerIdx) {
@@ -96,7 +98,7 @@ function choosePlayer(){
         if(opponentArr.indexOf(key) != -1){
           console.log(`${key} is an opponent, i fucking hope`);
           let charBox = $(`
-          <div id="${value.name}" class="characters characterFrame ${value.name}-rest" data-name=${value.name}>`);
+          <div id="${value.name}" class="characters characterFrame opponents" data-name=${value.name}>`);
           let charName = $(`<h3>${value.name}</h3>`);
           let charImg = $(`<img class="characterImg" id="${value.name}Img" src="./assets/images/${value.name}-opponent.svg">`);
           let charHealth = $(`<p>HP: <span id="${value.name}-hp">${value.hp}</span></p>`);
@@ -106,10 +108,27 @@ function choosePlayer(){
       })
       $("#message").text(`You are ${playerId}. Wise choice. Now choose an opponent.`);
       isPlayerChosen = true;
-      
+      chooseOpponent();
     }
   });
+}
 
+function chooseOpponent(){
+  $('.opponents').on("click", function(e){
+    if ( isOpponentChosen ) {
+      return;
+    }
+    else {
+      opponent = $(this);
+      $('#onDeck').html(opponent);
+      opponentId =$(this).attr('id');
+
+      let oppIdx = opponentArr.indexOf(opponentId);
+      opponentArr.splice(oppIdx, 1);
+      isOpponentChosen = true;
+    }
+
+  })
 }
 //once player is chosen, the others become opponents and player fights them all.
 //would it be easier to empty the div below and reload with a new look above?
